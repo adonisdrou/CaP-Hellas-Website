@@ -9,16 +9,12 @@ import MorphingBlobs from '@/components/MorphingBlobs';
 import CursorTrail from '@/components/CursorTrail';
 import FloatingContactButton from '@/components/FloatingContactButton';
 import ProgressBar from '@/components/ProgressBar';
-import QuantumParticles from '@/components/QuantumParticles';
-import InteractiveMouse from '@/components/InteractiveMouse';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <ProgressBar />
       <CursorTrail />
-      <QuantumParticles />
-      <InteractiveMouse />
       <MorphingBlobs />
       <Navigation />
       <main>
