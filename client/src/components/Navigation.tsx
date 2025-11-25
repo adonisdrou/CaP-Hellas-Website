@@ -28,7 +28,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <nav className="sticky top-0 z-50 border-b bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/90" style={{ backgroundColor: 'hsl(var(--section-light-green) / 0.4)' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-8">

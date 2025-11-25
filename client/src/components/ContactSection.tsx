@@ -69,7 +69,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 scroll-mt-16">
+    <section id="contact" className="py-20 scroll-mt-16" style={{ backgroundColor: 'hsl(var(--section-light-orange) / 0.6)' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4" data-testid="text-contact-title">
