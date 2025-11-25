@@ -33,7 +33,6 @@ import honeyImage from '@assets/generated_images/pure_golden_honey.png';
 import pepperSpreadsImage from '@assets/generated_images/pepper_spread_product.png';
 import jamsImage from '@assets/generated_images/homemade_jams_variety.png';
 import tomatoSaucesImage from '@assets/generated_images/tomato_sauce_product.png';
-import stuffedPeppersImage from '@assets/generated_images/stuffed_peppers_florina.png';
 import pickledBeetsImage from '@assets/generated_images/pickled_beets_in_jar.png';
 import pickledCucumbersImage from '@assets/generated_images/pickled_cucumbers_product.png';
 import capersImage from '@assets/generated_images/capers_in_jar.png';
@@ -42,11 +41,10 @@ import yogurtImage from '@assets/generated_images/greek_yogurt_large_container.p
 import longPeppersImage from '@assets/generated_images/long_macedonian_peppers.png';
 import florinaPeppersInBrineImage from '@assets/generated_images/florina_peppers_in_brine.png';
 import redPeppersInOilImage from '@assets/generated_images/red_peppers_in_oil.png';
-import driedFigsImage from '@assets/generated_images/dried_figs_product.png';
+import driedFigsImage from '@assets/generated_images/small_brown_dried_figs.png';
 import driedFruitsImage from '@assets/generated_images/mixed_dried_fruits_nuts.png';
-import cheeseStuffedPeppersImage from '@assets/generated_images/cheese-stuffed_peppers.png';
 
-type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'stuffedPeppers' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
+type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
 
 interface Product {
   nameKey: ProductKey;
@@ -86,7 +84,6 @@ const allProducts: Product[] = [
   { nameKey: 'pepperSpreads', image: pepperSpreadsImage, origin: 'greece', category: 'other' },
   { nameKey: 'jams', image: jamsImage, origin: 'greece', category: 'other' },
   { nameKey: 'tomatoSauces', image: tomatoSaucesImage, origin: 'greece', category: 'other' },
-  { nameKey: 'stuffedPeppers', image: cheeseStuffedPeppersImage, origin: 'greece', category: 'other' },
   { nameKey: 'pickledBeets', image: pickledBeetsImage, origin: 'greece', category: 'other' },
   { nameKey: 'pickledCucumbers', image: pickledCucumbersImage, origin: 'greece', category: 'other' },
   { nameKey: 'capers', image: capersImage, origin: 'greece', category: 'other' },

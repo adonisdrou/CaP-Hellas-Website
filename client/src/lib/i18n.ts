@@ -70,7 +70,6 @@ export interface Translations {
       pepperSpreads: string;
       jams: string;
       tomatoSauces: string;
-      stuffedPeppers: string;
       pickledBeets: string;
       pickledCucumbers: string;
       capers: string;
@@ -184,7 +183,6 @@ export const translations: Record<Language, Translations> = {
         pepperSpreads: 'Pepper Spreads',
         jams: 'Jams',
         tomatoSauces: 'Tomato Sauces',
-        stuffedPeppers: 'Stuffed Peppers',
         pickledBeets: 'Pickled Beets',
         pickledCucumbers: 'Pickled Cucumbers',
         capers: 'Capers',
@@ -296,7 +294,6 @@ export const translations: Record<Language, Translations> = {
         pepperSpreads: 'Αλοιφές Πιπεριάς',
         jams: 'Μαρμελάδες',
         tomatoSauces: 'Σάλτσες Ντομάτας',
-        stuffedPeppers: 'Πιπεριές Γεμιστές Φλώρινας',
         pickledBeets: 'Παντζάρι σε Άλμη',
         pickledCucumbers: 'Αγγουράκια σε Άλμη',
         capers: 'Κάπαρη',
@@ -408,7 +405,6 @@ export const translations: Record<Language, Translations> = {
         pepperSpreads: 'Pasty z Papryki',
         jams: 'Dżemy',
         tomatoSauces: 'Sosy Pomidorowe',
-        stuffedPeppers: 'Papryka Faszerowana',
         pickledBeets: 'Buraki w Zalewie',
         pickledCucumbers: 'Ogórki Kiszone',
         capers: 'Kaparki',
