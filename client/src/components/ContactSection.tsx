@@ -55,17 +55,41 @@ export default function ContactSection() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    console.log('Contact form submitted:', data);
     
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: t.contact.form.success,
-      description: 'Selina Majerska',
-    });
-    
-    form.reset();
-    setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        toast({
+          title: t.contact.form.success,
+          description: 'Selina Majerska will contact you soon!',
+        });
+        form.reset();
+      } else {
+        toast({
+          title: 'Error',
+          description: result.message || 'Failed to send message',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

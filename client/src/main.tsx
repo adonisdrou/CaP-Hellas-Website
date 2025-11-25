@@ -1,10 +1,8 @@
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import "./index-themes.css";
 
-// Load saved theme preference
-const savedTheme = localStorage.getItem('theme') || 'default';
-document.documentElement.setAttribute('data-theme', savedTheme);
+// Set default theme
+document.documentElement.setAttribute('data-theme', 'default');
 
 createRoot(document.getElementById("root")!).render(<App />);

@@ -8,14 +8,12 @@ import Footer from '@/components/Footer';
 import MorphingBlobs from '@/components/MorphingBlobs';
 import FloatingContactButton from '@/components/FloatingContactButton';
 import ProgressBar from '@/components/ProgressBar';
-import ThemeVariants from '@/components/ThemeVariants';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <ProgressBar />
       <MorphingBlobs />
-      <ThemeVariants />
       <Navigation />
       <main>
         <HeroSection />
