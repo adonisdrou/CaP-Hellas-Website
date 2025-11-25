@@ -10,6 +10,7 @@ import grapesImage from '@assets/stock_images/fresh_green_grapes_b_3f45a374.jpg'
 import applesImage from '@assets/stock_images/fresh_red_apples_4f24fcfb.jpg';
 import peachesImage from '@assets/stock_images/fresh_peaches_ripe_f_0325d79f.jpg';
 import watermelonImage from '@assets/stock_images/fresh_watermelon_sli_d82eab3c.jpg';
+import kiwiImage from '@assets/stock_images/fresh_green_kiwi_fru_0345e7fa.jpg';
 import tomatoesImage from '@assets/stock_images/fresh_ripe_tomatoes_380244ee.jpg';
 import cucumbersImage from '@assets/stock_images/fresh_green_cucumber_201ab74d.jpg';
 import peppersImage from '@assets/stock_images/fresh_bell_peppers_c_11cbaf15.jpg';
@@ -21,7 +22,7 @@ import olivesImage from '@assets/stock_images/fresh_green_olives_m_829465de.jpg'
 import pomegranateJuiceImage from '@assets/stock_images/pomegranate_juice_fr_8f050761.jpg';
 import raisinsImage from '@assets/stock_images/dark_raisins_dried_f_f41c5f23.jpg';
 
-type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins';
+type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins';
 
 interface Product {
   nameKey: ProductKey;
@@ -39,6 +40,7 @@ const allProducts: Product[] = [
   { nameKey: 'apples', image: applesImage, origin: 'poland', category: 'fruits' },
   { nameKey: 'peaches', image: peachesImage, origin: 'greece', category: 'fruits' },
   { nameKey: 'watermelon', image: watermelonImage, origin: 'greece', category: 'fruits' },
+  { nameKey: 'kiwi', image: kiwiImage, origin: 'greece', category: 'fruits' },
   { nameKey: 'tomatoes', image: tomatoesImage, origin: 'greece', category: 'vegetables' },
   { nameKey: 'cucumbers', image: cucumbersImage, origin: 'greece', category: 'vegetables' },
   { nameKey: 'peppers', image: peppersImage, origin: 'greece', category: 'vegetables' },

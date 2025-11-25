@@ -48,6 +48,7 @@ export interface Translations {
       apples: string;
       peaches: string;
       watermelon: string;
+      kiwi: string;
       tomatoes: string;
       cucumbers: string;
       peppers: string;
@@ -139,6 +140,7 @@ export const translations: Record<Language, Translations> = {
         apples: 'Apples',
         peaches: 'Peaches',
         watermelon: 'Watermelon',
+        kiwi: 'Kiwi',
         tomatoes: 'Tomatoes',
         cucumbers: 'Cucumbers',
         peppers: 'Bell Peppers',
@@ -228,6 +230,7 @@ export const translations: Record<Language, Translations> = {
         apples: 'Μήλα',
         peaches: 'Ροδάκινα',
         watermelon: 'Καρπούζι',
+        kiwi: 'Ακτινίδια',
         tomatoes: 'Ντομάτες',
         cucumbers: 'Αγγούρια',
         peppers: 'Πιπεριές',
@@ -317,6 +320,7 @@ export const translations: Record<Language, Translations> = {
         apples: 'Jabłka',
         peaches: 'Brzoskwinie',
         watermelon: 'Arbuz',
+        kiwi: 'Kiwi',
         tomatoes: 'Pomidory',
         cucumbers: 'Ogórki',
         peppers: 'Papryka',
