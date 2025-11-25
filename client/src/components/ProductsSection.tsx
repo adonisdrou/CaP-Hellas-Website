@@ -28,7 +28,7 @@ import pomegranateJuiceImage from '@assets/generated_images/pomegranate_juice_pr
 import raisinsImage from '@assets/generated_images/raisins_product_photo.png';
 import whiteWineImage from '@assets/generated_images/premium_white_wine.png';
 import roseWineImage from '@assets/generated_images/premium_rose_wine.png';
-import redWineImage from '@assets/generated_images/premium_red_wine_bottle.png';
+import redWineImage from '@assets/generated_images/red_wine_bottle_and_glass.png';
 import halvaImage from '@assets/generated_images/traditional_halva_sweet.png';
 import honeyImage from '@assets/generated_images/pure_golden_honey.png';
 import pepperSpreadsImage from '@assets/generated_images/pepper_spread_product.png';
@@ -42,7 +42,7 @@ import yogurtImage from '@assets/generated_images/greek_yogurt_large_container.p
 import longPeppersImage from '@assets/generated_images/long_macedonian_peppers.png';
 import florinaPeppersInBrineImage from '@assets/generated_images/florina_peppers_in_brine.png';
 import redPeppersInOilImage from '@assets/generated_images/red_peppers_in_oil.png';
-import driedFigsImage from '@assets/generated_images/small_brown_dried_figs.png';
+import driedFigsImage from '@assets/generated_images/dried_figs_pile.png';
 import driedFruitsImage from '@assets/generated_images/mixed_dried_fruits_nuts.png';
 
 type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'redWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
