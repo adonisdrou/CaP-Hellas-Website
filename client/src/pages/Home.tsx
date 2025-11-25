@@ -5,10 +5,12 @@ import ProductsSection from '@/components/ProductsSection';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import MorphingBlobs from '@/components/MorphingBlobs';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <MorphingBlobs />
       <Navigation />
       <main>
         <HeroSection />

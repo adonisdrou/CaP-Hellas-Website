@@ -2,9 +2,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@assets/generated_images/hero_shipping_produce_image.png';
+import { useMagneticCursor } from '@/hooks/useMagneticCursor';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
+  const magneticRef = useMagneticCursor();
 
   const scrollToProducts = () => {
     const element = document.querySelector('#products');
@@ -62,9 +64,10 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
+            ref={magneticRef}
             size="lg"
             onClick={scrollToProducts}
-            className="gap-2 text-base w-full sm:w-auto"
+            className="gap-2 text-base w-full sm:w-auto transition-transform duration-200 ease-out"
             data-testid="button-hero-cta"
           >
             {t.hero.cta}
@@ -74,7 +77,7 @@ export default function HeroSection() {
             size="lg"
             variant="outline"
             onClick={scrollToContact}
-            className="gap-2 text-base w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20"
+            className="gap-2 text-base w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 transition-all duration-300"
             data-testid="button-hero-contact"
           >
             {t.nav.contact}

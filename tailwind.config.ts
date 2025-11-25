@@ -116,6 +116,9 @@ export default {
         "gradient-shift": "gradient-shift 8s ease infinite",
         "float-up": "float-up 0.6s ease-out forwards",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
+        "blob1": "blob1 8s infinite",
+        "blob2": "blob2 7s infinite",
+        "blob3": "blob3 9s infinite",
       },
       perspective: {
         "1000": "1000px",

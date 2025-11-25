@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 interface ProductCardProps {
   name: string;
@@ -11,9 +12,11 @@ interface ProductCardProps {
 
 export default function ProductCard({ name, image, origin, category }: ProductCardProps) {
   const { t } = useLanguage();
+  const { ref, isVisible } = useScrollReveal();
   
   return (
-    <Card className="overflow-hidden group border-2 border-accent/20 shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-accent/60 hover:scale-105 h-full glassmorphism">
+    <div ref={ref} className={`transition-all duration-700 ${isVisible ? 'animate-float-up opacity-100' : 'opacity-0'}`}>
+      <Card className="overflow-hidden group border-2 border-accent/20 shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-accent/60 hover:scale-105 h-full glassmorphism">
       <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
         <img
           src={image}
@@ -36,6 +39,7 @@ export default function ProductCard({ name, image, origin, category }: ProductCa
           {category}
         </p>
       </CardContent>
-    </Card>
+      </Card>
+    </div>
   );
 }
