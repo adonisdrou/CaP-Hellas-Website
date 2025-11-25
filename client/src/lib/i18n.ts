@@ -59,6 +59,7 @@ export interface Translations {
       carrots: string;
       broccoli: string;
       cabbage: string;
+      potatoes: string;
       oliveOil: string;
       olives: string;
       pomegranateJuice: string;
@@ -173,6 +174,7 @@ export const translations: Record<Language, Translations> = {
         carrots: 'Carrots',
         broccoli: 'Broccoli',
         cabbage: 'Cabbage',
+        potatoes: 'Potatoes',
         oliveOil: 'Olive Oil',
         olives: 'Olives',
         pomegranateJuice: 'Pomegranate Juice',
@@ -285,6 +287,7 @@ export const translations: Record<Language, Translations> = {
         carrots: 'Καρότα',
         broccoli: 'Μπρόκολο',
         cabbage: 'Λάχανο',
+        potatoes: 'Πατάτες',
         oliveOil: 'Ελαιόλαδο',
         olives: 'Ελιές',
         pomegranateJuice: 'Χυμός Ρόδι',
@@ -397,6 +400,7 @@ export const translations: Record<Language, Translations> = {
         carrots: 'Marchewki',
         broccoli: 'Brokuły',
         cabbage: 'Kapusta',
+        potatoes: 'Ziemniaki',
         oliveOil: 'Oliwa z oliwek',
         olives: 'Oliwki',
         pomegranateJuice: 'Sok z granatu',

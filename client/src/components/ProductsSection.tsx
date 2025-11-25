@@ -42,10 +42,11 @@ import yogurtImage from '@assets/generated_images/greek_yogurt_large_container.p
 import longPeppersImage from '@assets/generated_images/long_macedonian_peppers.png';
 import florinaPeppersInBrineImage from '@assets/generated_images/florina_peppers_in_brine.png';
 import redPeppersInOilImage from '@assets/generated_images/red_peppers_in_oil.png';
-import driedFigsImage from '@assets/generated_images/dried_figs_pile.png';
+import driedFigsImage from '@assets/generated_images/natural_dried_figs_rustic.png';
+import potatoesImage from '@assets/generated_images/fresh_potatoes_product.png';
 import driedFruitsImage from '@assets/generated_images/mixed_dried_fruits_nuts.png';
 
-type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'redWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
+type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'potatoes' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'redWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
 
 interface Product {
   nameKey: ProductKey;
@@ -74,6 +75,7 @@ const allProducts: Product[] = [
   { nameKey: 'carrots', image: carrotsImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'broccoli', image: broccoliImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'cabbage', image: cabbageImage, origin: 'poland', category: 'vegetables' },
+  { nameKey: 'potatoes', image: potatoesImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'oliveOil', image: oliveOilImage, origin: 'greece', category: 'other' },
   { nameKey: 'olives', image: olivesImage, origin: 'greece', category: 'other' },
   { nameKey: 'pomegranateJuice', image: pomegranateJuiceImage, origin: 'greece', category: 'other' },
