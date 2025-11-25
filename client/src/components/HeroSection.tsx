@@ -32,7 +32,12 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70 animate-gradient-shift" 
+        style={{
+          backgroundImage: `linear-gradient(-45deg, rgba(0,0,0,0.7), rgba(40,167,69,0.2), rgba(20,85,35,0.1), rgba(0,0,0,0.7))`,
+          backgroundSize: '200% 200%'
+        }}
+      />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex flex-col items-center mb-6">
