@@ -76,6 +76,11 @@ export interface Translations {
       capers: string;
       fetaCheese: string;
       yogurt: string;
+      longPeppers: string;
+      florinaPeppersInBrine: string;
+      redPeppersInOil: string;
+      driedFigs: string;
+      driedFruits: string;
     };
   };
   about: {
@@ -185,6 +190,11 @@ export const translations: Record<Language, Translations> = {
         capers: 'Capers',
         fetaCheese: 'Feta Cheese',
         yogurt: 'Yogurt',
+        longPeppers: 'Long Macedonian Peppers',
+        florinaPeppersInBrine: 'Florina Peppers in Brine',
+        redPeppersInOil: 'Red Peppers in Oil',
+        driedFigs: 'Dried Figs',
+        driedFruits: 'Dried Fruits & Nuts',
       },
     },
     about: {
@@ -292,6 +302,11 @@ export const translations: Record<Language, Translations> = {
         capers: 'Κάπαρη',
         fetaCheese: 'Τυρί Φέτα',
         yogurt: 'Γιαούρτι',
+        longPeppers: 'Μακροστενές Πιπεριές',
+        florinaPeppersInBrine: 'Πιπεριές Φλώρινας σε Άλμη',
+        redPeppersInOil: 'Μικρά Κόκκινα Πιπεράκια σε Λάδι',
+        driedFigs: 'Αποξηραμένα Σύκα',
+        driedFruits: 'Ξηροί Καρποί',
       },
     },
     about: {
@@ -399,6 +414,11 @@ export const translations: Record<Language, Translations> = {
         capers: 'Kaparki',
         fetaCheese: 'Ser Feta',
         yogurt: 'Jogurt',
+        longPeppers: 'Długie Papryki Macedońskie',
+        florinaPeppersInBrine: 'Papryka Florina w Zalewie',
+        redPeppersInOil: 'Małe Czerwone Papryczki w Oliwie',
+        driedFigs: 'Suszone Figi',
+        driedFruits: 'Suszone Owoce i Orzechy',
       },
     },
     about: {
