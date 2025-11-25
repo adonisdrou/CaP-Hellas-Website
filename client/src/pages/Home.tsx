@@ -6,7 +6,6 @@ import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import MorphingBlobs from '@/components/MorphingBlobs';
-import CursorTrail from '@/components/CursorTrail';
 import FloatingContactButton from '@/components/FloatingContactButton';
 import ProgressBar from '@/components/ProgressBar';
 import ThemeVariants from '@/components/ThemeVariants';
@@ -15,7 +14,6 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <ProgressBar />
-      <CursorTrail />
       <MorphingBlobs />
       <ThemeVariants />
       <Navigation />
