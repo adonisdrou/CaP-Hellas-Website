@@ -42,7 +42,7 @@ import yogurtImage from '@assets/generated_images/greek_yogurt_large_container.p
 import longPeppersImage from '@assets/generated_images/long_macedonian_peppers.png';
 import florinaPeppersInBrineImage from '@assets/generated_images/florina_peppers_in_brine.png';
 import redPeppersInOilImage from '@assets/generated_images/red_peppers_in_oil.png';
-import driedFigsImage from '@assets/generated_images/natural_dried_figs_rustic.png';
+import driedFigsImage from '@assets/generated_images/dried_figs_pile.png';
 import potatoesImage from '@assets/generated_images/fresh_potatoes_product.png';
 import driedFruitsImage from '@assets/generated_images/mixed_dried_fruits_nuts.png';
 
