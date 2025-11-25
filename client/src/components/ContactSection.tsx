@@ -22,7 +22,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Mail, Phone, MapPin, Building } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Logo from './Logo';
+import FruitDecorations from './FruitDecorations';
 import { useToast } from '@/hooks/use-toast';
 
 const contactFormSchema = z.object({
@@ -182,16 +184,14 @@ export default function ContactSection() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Building className="h-5 w-5 text-primary" />
                   {t.contact.info.company}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div>
-                  <div className="font-semibold text-lg mb-1" data-testid="text-company-name">
-                    CaP Hellas E.E
-                  </div>
+                <div data-testid="text-company-name">
+                  <Logo size="md" showTagline />
                 </div>
+                <FruitDecorations className="py-2" />
 
                 <div className="pt-4 border-t">
                   <div className="text-sm text-muted-foreground mb-2">{t.contact.info.contact}</div>

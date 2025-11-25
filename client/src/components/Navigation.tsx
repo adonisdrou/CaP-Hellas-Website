@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import Logo from './Logo';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
 
@@ -29,12 +30,10 @@ export default function Navigation() {
   return (
     <nav className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="font-bold text-xl text-primary" data-testid="text-company-name">
-                CaP Hellas E.E
-              </div>
+            <Link href="/" className="flex items-center gap-2" data-testid="link-logo">
+              <Logo size="sm" />
             </Link>
 
             <div className="hidden md:flex items-center gap-1">

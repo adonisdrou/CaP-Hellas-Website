@@ -33,10 +33,31 @@ export interface Translations {
       fruits: string;
       vegetables: string;
       other: string;
+      all: string;
     };
     origin: {
       greece: string;
       poland: string;
+    };
+    items: {
+      strawberries: string;
+      oranges: string;
+      mandarins: string;
+      lemons: string;
+      grapes: string;
+      apples: string;
+      peaches: string;
+      watermelon: string;
+      tomatoes: string;
+      cucumbers: string;
+      peppers: string;
+      lettuce: string;
+      carrots: string;
+      broccoli: string;
+      oliveOil: string;
+      olives: string;
+      pomegranateJuice: string;
+      raisins: string;
     };
   };
   about: {
@@ -103,10 +124,31 @@ export const translations: Record<Language, Translations> = {
         fruits: 'Fruits',
         vegetables: 'Vegetables',
         other: 'Other Products',
+        all: 'All Products',
       },
       origin: {
         greece: 'Greece',
         poland: 'Poland',
+      },
+      items: {
+        strawberries: 'Strawberries',
+        oranges: 'Oranges',
+        mandarins: 'Mandarins',
+        lemons: 'Lemons',
+        grapes: 'Grapes',
+        apples: 'Apples',
+        peaches: 'Peaches',
+        watermelon: 'Watermelon',
+        tomatoes: 'Tomatoes',
+        cucumbers: 'Cucumbers',
+        peppers: 'Bell Peppers',
+        lettuce: 'Lettuce',
+        carrots: 'Carrots',
+        broccoli: 'Broccoli',
+        oliveOil: 'Olive Oil',
+        olives: 'Olives',
+        pomegranateJuice: 'Pomegranate Juice',
+        raisins: 'Raisins',
       },
     },
     about: {
@@ -171,10 +213,31 @@ export const translations: Record<Language, Translations> = {
         fruits: 'Φρούτα',
         vegetables: 'Λαχανικά',
         other: 'Άλλα Προϊόντα',
+        all: 'Όλα τα Προϊόντα',
       },
       origin: {
         greece: 'Ελλάδα',
         poland: 'Πολωνία',
+      },
+      items: {
+        strawberries: 'Φράουλες',
+        oranges: 'Πορτοκάλια',
+        mandarins: 'Μανταρίνια',
+        lemons: 'Λεμόνια',
+        grapes: 'Σταφύλια',
+        apples: 'Μήλα',
+        peaches: 'Ροδάκινα',
+        watermelon: 'Καρπούζι',
+        tomatoes: 'Ντομάτες',
+        cucumbers: 'Αγγούρια',
+        peppers: 'Πιπεριές',
+        lettuce: 'Μαρούλι',
+        carrots: 'Καρότα',
+        broccoli: 'Μπρόκολο',
+        oliveOil: 'Ελαιόλαδο',
+        olives: 'Ελιές',
+        pomegranateJuice: 'Χυμός Ρόδι',
+        raisins: 'Σταφίδες',
       },
     },
     about: {
@@ -239,10 +302,31 @@ export const translations: Record<Language, Translations> = {
         fruits: 'Owoce',
         vegetables: 'Warzywa',
         other: 'Inne Produkty',
+        all: 'Wszystkie Produkty',
       },
       origin: {
         greece: 'Grecja',
         poland: 'Polska',
+      },
+      items: {
+        strawberries: 'Truskawki',
+        oranges: 'Pomarańcze',
+        mandarins: 'Mandarynki',
+        lemons: 'Cytryny',
+        grapes: 'Winogrona',
+        apples: 'Jabłka',
+        peaches: 'Brzoskwinie',
+        watermelon: 'Arbuz',
+        tomatoes: 'Pomidory',
+        cucumbers: 'Ogórki',
+        peppers: 'Papryka',
+        lettuce: 'Sałata',
+        carrots: 'Marchewki',
+        broccoli: 'Brokuły',
+        oliveOil: 'Oliwa z oliwek',
+        olives: 'Oliwki',
+        pomegranateJuice: 'Sok z granatu',
+        raisins: 'Rodzynki',
       },
     },
     about: {
