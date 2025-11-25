@@ -72,7 +72,7 @@ export default function ContactSection() {
     <section id="contact" className="py-20 scroll-mt-16" style={{ backgroundColor: 'hsl(var(--section-light-orange) / 0.6)' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4" data-testid="text-contact-title">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent" data-testid="text-contact-title">
             {t.contact.title}
           </h2>
           <p className="text-lg text-muted-foreground" data-testid="text-contact-subtitle">

@@ -26,7 +26,7 @@ export default function ServicesSection() {
   return (
     <section className="py-20" style={{ backgroundColor: 'hsl(var(--section-light-green))' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12" data-testid="text-services-title">
+        <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" data-testid="text-services-title">
           {t.services.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -71,7 +71,7 @@ export default function ProductsSection() {
   return (
     <section id="products" className="py-20 scroll-mt-16" style={{ backgroundColor: 'hsl(var(--section-light-orange))' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-testid="text-products-title">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent" data-testid="text-products-title">
           {t.products.title}
         </h2>
 

@@ -9,7 +9,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold mb-6" data-testid="text-about-title">
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent" data-testid="text-about-title">
               {t.about.title}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-about-content">
