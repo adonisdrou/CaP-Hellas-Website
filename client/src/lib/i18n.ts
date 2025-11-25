@@ -49,16 +49,33 @@ export interface Translations {
       peaches: string;
       watermelon: string;
       kiwi: string;
+      apricots: string;
+      nectarines: string;
+      bananas: string;
       tomatoes: string;
       cucumbers: string;
       peppers: string;
       lettuce: string;
       carrots: string;
       broccoli: string;
+      cabbage: string;
       oliveOil: string;
       olives: string;
       pomegranateJuice: string;
       raisins: string;
+      whiteWine: string;
+      roseWine: string;
+      halva: string;
+      honey: string;
+      pepperSpreads: string;
+      jams: string;
+      tomatoSauces: string;
+      stuffedPeppers: string;
+      pickledBeets: string;
+      pickledCucumbers: string;
+      capers: string;
+      fetaCheese: string;
+      yogurt: string;
     };
   };
   about: {
@@ -141,16 +158,33 @@ export const translations: Record<Language, Translations> = {
         peaches: 'Peaches',
         watermelon: 'Watermelon',
         kiwi: 'Kiwi',
+        apricots: 'Apricots',
+        nectarines: 'Nectarines',
+        bananas: 'Bananas',
         tomatoes: 'Tomatoes',
         cucumbers: 'Cucumbers',
         peppers: 'Bell Peppers',
         lettuce: 'Lettuce',
         carrots: 'Carrots',
         broccoli: 'Broccoli',
+        cabbage: 'Cabbage',
         oliveOil: 'Olive Oil',
         olives: 'Olives',
         pomegranateJuice: 'Pomegranate Juice',
         raisins: 'Raisins',
+        whiteWine: 'White Wine',
+        roseWine: 'Rose Wine',
+        halva: 'Halva',
+        honey: 'Honey',
+        pepperSpreads: 'Pepper Spreads',
+        jams: 'Jams',
+        tomatoSauces: 'Tomato Sauces',
+        stuffedPeppers: 'Stuffed Peppers',
+        pickledBeets: 'Pickled Beets',
+        pickledCucumbers: 'Pickled Cucumbers',
+        capers: 'Capers',
+        fetaCheese: 'Feta Cheese',
+        yogurt: 'Yogurt',
       },
     },
     about: {
@@ -231,16 +265,33 @@ export const translations: Record<Language, Translations> = {
         peaches: 'Ροδάκινα',
         watermelon: 'Καρπούζι',
         kiwi: 'Ακτινίδια',
+        apricots: 'Βερικοκά',
+        nectarines: 'Νεκταρίνιες',
+        bananas: 'Μπανάνες',
         tomatoes: 'Ντομάτες',
         cucumbers: 'Αγγούρια',
         peppers: 'Πιπεριές',
         lettuce: 'Μαρούλι',
         carrots: 'Καρότα',
         broccoli: 'Μπρόκολο',
+        cabbage: 'Λάχανο',
         oliveOil: 'Ελαιόλαδο',
         olives: 'Ελιές',
         pomegranateJuice: 'Χυμός Ρόδι',
         raisins: 'Σταφίδες',
+        whiteWine: 'Λευκό Κρασί',
+        roseWine: 'Ροζέ Κρασί',
+        halva: 'Χαλβάς',
+        honey: 'Μέλι',
+        pepperSpreads: 'Αλοιφές Πιπεριάς',
+        jams: 'Μαρμελάδες',
+        tomatoSauces: 'Σάλτσες Ντομάτας',
+        stuffedPeppers: 'Πιπεριές Γεμιστές Φλώρινας',
+        pickledBeets: 'Παντζάρι σε Άλμη',
+        pickledCucumbers: 'Αγγουράκια σε Άλμη',
+        capers: 'Κάπαρη',
+        fetaCheese: 'Τυρί Φέτα',
+        yogurt: 'Γιαούρτι',
       },
     },
     about: {
@@ -321,16 +372,33 @@ export const translations: Record<Language, Translations> = {
         peaches: 'Brzoskwinie',
         watermelon: 'Arbuz',
         kiwi: 'Kiwi',
+        apricots: 'Morele',
+        nectarines: 'Nektarynki',
+        bananas: 'Banany',
         tomatoes: 'Pomidory',
         cucumbers: 'Ogórki',
         peppers: 'Papryka',
         lettuce: 'Sałata',
         carrots: 'Marchewki',
         broccoli: 'Brokuły',
+        cabbage: 'Kapusta',
         oliveOil: 'Oliwa z oliwek',
         olives: 'Oliwki',
         pomegranateJuice: 'Sok z granatu',
         raisins: 'Rodzynki',
+        whiteWine: 'Białe Wino',
+        roseWine: 'Rosé Wino',
+        halva: 'Helwa',
+        honey: 'Miód',
+        pepperSpreads: 'Pasty z Papryki',
+        jams: 'Dżemy',
+        tomatoSauces: 'Sosy Pomidorowe',
+        stuffedPeppers: 'Papryka Faszerowana',
+        pickledBeets: 'Buraki w Zalewie',
+        pickledCucumbers: 'Ogórki Kiszone',
+        capers: 'Kaparki',
+        fetaCheese: 'Ser Feta',
+        yogurt: 'Jogurt',
       },
     },
     about: {

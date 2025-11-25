@@ -11,18 +11,36 @@ import grapesImage from '@assets/generated_images/fresh_grapes_product_photo.png
 import applesImage from '@assets/generated_images/fresh_apples_product_photo.png';
 import peachesImage from '@assets/generated_images/fresh_peaches_product_photo.png';
 import watermelonImage from '@assets/generated_images/fresh_watermelon_product_photo.png';
+import kiwiImage from '@assets/generated_images/fresh_kiwi_fruit.png';
+import apricotsImage from '@assets/generated_images/fresh_apricots_product.png';
+import nectarinesImage from '@assets/generated_images/fresh_nectarines_product.png';
+import bananasImage from '@assets/generated_images/fresh_bananas_product.png';
 import tomatoesImage from '@assets/generated_images/fresh_tomatoes_product_photo.png';
 import cucumbersImage from '@assets/generated_images/fresh_cucumbers_product_photo.png';
 import peppersImage from '@assets/generated_images/fresh_bell_peppers_photo.png';
 import lettuceImage from '@assets/generated_images/fresh_lettuce_product_photo.png';
 import carrotsImage from '@assets/generated_images/fresh_carrots_product_photo.png';
 import broccoliImage from '@assets/generated_images/fresh_broccoli_product_photo.png';
+import cabbageImage from '@assets/generated_images/fresh_cabbage_vegetable.png';
 import oliveOilImage from '@assets/generated_images/olive_oil_bottle_photo.png';
 import olivesImage from '@assets/generated_images/fresh_olives_product_photo.png';
 import pomegranateJuiceImage from '@assets/generated_images/pomegranate_juice_product_photo.png';
 import raisinsImage from '@assets/generated_images/raisins_product_photo.png';
+import whiteWineImage from '@assets/generated_images/premium_white_wine.png';
+import roseWineImage from '@assets/generated_images/premium_rose_wine.png';
+import halvaImage from '@assets/generated_images/traditional_halva_sweet.png';
+import honeyImage from '@assets/generated_images/pure_golden_honey.png';
+import pepperSpreadsImage from '@assets/generated_images/pepper_spread_product.png';
+import jamsImage from '@assets/generated_images/homemade_jams_variety.png';
+import tomatoSaucesImage from '@assets/generated_images/tomato_sauce_product.png';
+import stuffedPeppersImage from '@assets/generated_images/stuffed_peppers_florina.png';
+import pickledBeetsImage from '@assets/generated_images/pickled_beets_in_jar.png';
+import pickledCucumbersImage from '@assets/generated_images/pickled_cucumbers_product.png';
+import capersImage from '@assets/generated_images/capers_in_jar.png';
+import fetaCheeseImage from '@assets/generated_images/traditional_feta_cheese.png';
+import yogurtImage from '@assets/generated_images/greek_yogurt_product.png';
 
-type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins';
+type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'stuffedPeppers' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt';
 
 interface Product {
   nameKey: ProductKey;
@@ -40,17 +58,34 @@ const allProducts: Product[] = [
   { nameKey: 'apples', image: applesImage, origin: 'poland', category: 'fruits' },
   { nameKey: 'peaches', image: peachesImage, origin: 'greece', category: 'fruits' },
   { nameKey: 'watermelon', image: watermelonImage, origin: 'greece', category: 'fruits' },
-  { nameKey: 'kiwi', image: watermelonImage, origin: 'greece', category: 'fruits' },
+  { nameKey: 'kiwi', image: kiwiImage, origin: 'greece', category: 'fruits' },
+  { nameKey: 'apricots', image: apricotsImage, origin: 'greece', category: 'fruits' },
+  { nameKey: 'nectarines', image: nectarinesImage, origin: 'greece', category: 'fruits' },
+  { nameKey: 'bananas', image: bananasImage, origin: 'greece', category: 'fruits' },
   { nameKey: 'tomatoes', image: tomatoesImage, origin: 'greece', category: 'vegetables' },
   { nameKey: 'cucumbers', image: cucumbersImage, origin: 'greece', category: 'vegetables' },
   { nameKey: 'peppers', image: peppersImage, origin: 'greece', category: 'vegetables' },
   { nameKey: 'lettuce', image: lettuceImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'carrots', image: carrotsImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'broccoli', image: broccoliImage, origin: 'poland', category: 'vegetables' },
+  { nameKey: 'cabbage', image: cabbageImage, origin: 'poland', category: 'vegetables' },
   { nameKey: 'oliveOil', image: oliveOilImage, origin: 'greece', category: 'other' },
   { nameKey: 'olives', image: olivesImage, origin: 'greece', category: 'other' },
   { nameKey: 'pomegranateJuice', image: pomegranateJuiceImage, origin: 'greece', category: 'other' },
   { nameKey: 'raisins', image: raisinsImage, origin: 'greece', category: 'other' },
+  { nameKey: 'whiteWine', image: whiteWineImage, origin: 'greece', category: 'other' },
+  { nameKey: 'roseWine', image: roseWineImage, origin: 'greece', category: 'other' },
+  { nameKey: 'halva', image: halvaImage, origin: 'greece', category: 'other' },
+  { nameKey: 'honey', image: honeyImage, origin: 'greece', category: 'other' },
+  { nameKey: 'pepperSpreads', image: pepperSpreadsImage, origin: 'greece', category: 'other' },
+  { nameKey: 'jams', image: jamsImage, origin: 'greece', category: 'other' },
+  { nameKey: 'tomatoSauces', image: tomatoSaucesImage, origin: 'greece', category: 'other' },
+  { nameKey: 'stuffedPeppers', image: stuffedPeppersImage, origin: 'greece', category: 'other' },
+  { nameKey: 'pickledBeets', image: pickledBeetsImage, origin: 'greece', category: 'other' },
+  { nameKey: 'pickledCucumbers', image: pickledCucumbersImage, origin: 'greece', category: 'other' },
+  { nameKey: 'capers', image: capersImage, origin: 'greece', category: 'other' },
+  { nameKey: 'fetaCheese', image: fetaCheeseImage, origin: 'greece', category: 'other' },
+  { nameKey: 'yogurt', image: yogurtImage, origin: 'greece', category: 'other' },
 ];
 
 export default function ProductsSection() {
