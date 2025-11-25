@@ -65,6 +65,7 @@ export interface Translations {
       raisins: string;
       whiteWine: string;
       roseWine: string;
+      redWine: string;
       halva: string;
       honey: string;
       pepperSpreads: string;
@@ -178,6 +179,7 @@ export const translations: Record<Language, Translations> = {
         raisins: 'Raisins',
         whiteWine: 'White Wine',
         roseWine: 'Rose Wine',
+        redWine: 'Red Wine',
         halva: 'Halva',
         honey: 'Honey',
         pepperSpreads: 'Pepper Spreads',
@@ -289,6 +291,7 @@ export const translations: Record<Language, Translations> = {
         raisins: 'Σταφίδες',
         whiteWine: 'Λευκό Κρασί',
         roseWine: 'Ροζέ Κρασί',
+        redWine: 'Κόκκινο Κρασί',
         halva: 'Χαλβάς',
         honey: 'Μέλι',
         pepperSpreads: 'Αλοιφές Πιπεριάς',
@@ -400,6 +403,7 @@ export const translations: Record<Language, Translations> = {
         raisins: 'Rodzynki',
         whiteWine: 'Białe Wino',
         roseWine: 'Rosé Wino',
+        redWine: 'Czerwone Wino',
         halva: 'Helwa',
         honey: 'Miód',
         pepperSpreads: 'Pasty z Papryki',

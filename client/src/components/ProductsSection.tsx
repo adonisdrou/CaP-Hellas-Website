@@ -28,6 +28,7 @@ import pomegranateJuiceImage from '@assets/generated_images/pomegranate_juice_pr
 import raisinsImage from '@assets/generated_images/raisins_product_photo.png';
 import whiteWineImage from '@assets/generated_images/premium_white_wine.png';
 import roseWineImage from '@assets/generated_images/premium_rose_wine.png';
+import redWineImage from '@assets/generated_images/premium_red_wine_bottle.png';
 import halvaImage from '@assets/generated_images/traditional_halva_sweet.png';
 import honeyImage from '@assets/generated_images/pure_golden_honey.png';
 import pepperSpreadsImage from '@assets/generated_images/pepper_spread_product.png';
@@ -44,7 +45,7 @@ import redPeppersInOilImage from '@assets/generated_images/red_peppers_in_oil.pn
 import driedFigsImage from '@assets/generated_images/small_brown_dried_figs.png';
 import driedFruitsImage from '@assets/generated_images/mixed_dried_fruits_nuts.png';
 
-type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
+type ProductKey = 'strawberries' | 'oranges' | 'mandarins' | 'lemons' | 'grapes' | 'apples' | 'peaches' | 'watermelon' | 'kiwi' | 'apricots' | 'nectarines' | 'bananas' | 'tomatoes' | 'cucumbers' | 'peppers' | 'lettuce' | 'carrots' | 'broccoli' | 'cabbage' | 'oliveOil' | 'olives' | 'pomegranateJuice' | 'raisins' | 'whiteWine' | 'roseWine' | 'redWine' | 'halva' | 'honey' | 'pepperSpreads' | 'jams' | 'tomatoSauces' | 'pickledBeets' | 'pickledCucumbers' | 'capers' | 'fetaCheese' | 'yogurt' | 'longPeppers' | 'florinaPeppersInBrine' | 'redPeppersInOil' | 'driedFigs' | 'driedFruits';
 
 interface Product {
   nameKey: ProductKey;
@@ -79,6 +80,7 @@ const allProducts: Product[] = [
   { nameKey: 'raisins', image: raisinsImage, origin: 'greece', category: 'other' },
   { nameKey: 'whiteWine', image: whiteWineImage, origin: 'greece', category: 'other' },
   { nameKey: 'roseWine', image: roseWineImage, origin: 'greece', category: 'other' },
+  { nameKey: 'redWine', image: redWineImage, origin: 'greece', category: 'other' },
   { nameKey: 'halva', image: halvaImage, origin: 'greece', category: 'other' },
   { nameKey: 'honey', image: honeyImage, origin: 'greece', category: 'other' },
   { nameKey: 'pepperSpreads', image: pepperSpreadsImage, origin: 'greece', category: 'other' },
