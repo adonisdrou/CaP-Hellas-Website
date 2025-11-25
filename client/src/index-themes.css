@@ -1,0 +1,138 @@
+/* ================== THEME VARIANTS ================== */
+
+/* ==================== MINIMALIST THEME ==================== */
+/* Clean, elegant, whitespace-focused design */
+:root[data-theme="minimalist"] {
+  --background: 0 0% 99.5%;
+  --foreground: 0 0% 12%;
+  --border: 0 0% 90%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 12%;
+  --primary: 0 0% 25%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 90%;
+  --secondary-foreground: 0 0% 20%;
+  --accent: 200 80% 50%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 0 0% 92%;
+  --muted-foreground: 0 0% 45%;
+  --sidebar: 0 0% 97%;
+  --sidebar-primary: 0 0% 25%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 90%;
+  --sidebar-accent-foreground: 0 0% 20%;
+  --section-light-green: 200 40% 96%;
+  --section-light-orange: 200 40% 95%;
+  --section-light-yellow: 200 40% 94%;
+}
+
+:root[data-theme="minimalist"] {
+  --shadow-lg: 0px 2px 8px 0px rgba(0,0,0,0.06);
+  --shadow-xl: 0px 4px 16px 0px rgba(0,0,0,0.08);
+}
+
+/* MINIMALIST: Clean aesthetic */
+:root[data-theme="minimalist"] .animate-gradient-shift {
+  animation: none !important;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.1)) !important;
+}
+
+:root[data-theme="minimalist"] .glassmorphism {
+  backdrop-filter: blur(4px) !important;
+  background: rgba(255,255,255,0.6) !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+:root[data-theme="minimalist"] .MorphingBlobs {
+  opacity: 0.15 !important;
+}
+
+/* ==================== LUXURY THEME ==================== */
+/* Premium, sophisticated, dark with gold accents */
+:root[data-theme="luxury"] {
+  --background: 260 30% 8%;
+  --foreground: 0 0% 97%;
+  --border: 260 30% 18%;
+  --card: 260 30% 12%;
+  --card-foreground: 0 0% 97%;
+  --primary: 40 85% 55%;
+  --primary-foreground: 260 30% 8%;
+  --secondary: 260 30% 20%;
+  --secondary-foreground: 0 0% 97%;
+  --accent: 40 90% 65%;
+  --accent-foreground: 260 30% 8%;
+  --muted: 260 30% 25%;
+  --muted-foreground: 0 0% 75%;
+  --sidebar: 260 30% 10%;
+  --sidebar-primary: 40 85% 55%;
+  --sidebar-primary-foreground: 260 30% 8%;
+  --sidebar-accent: 260 30% 20%;
+  --sidebar-accent-foreground: 0 0% 97%;
+  --section-light-green: 260 30% 14%;
+  --section-light-orange: 260 30% 13%;
+  --section-light-yellow: 260 30% 12%;
+}
+
+:root[data-theme="luxury"] {
+  --shadow-lg: 0px 4px 20px 0px rgba(0,0,0,0.4);
+  --shadow-xl: 0px 8px 32px 0px rgba(0,0,0,0.5);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+:root[data-theme="luxury"] .glassmorphism {
+  backdrop-filter: blur(12px) !important;
+  background: rgba(40,40,60,0.3) !important;
+  border: 1px solid rgba(212,175,55,0.2) !important;
+}
+
+:root[data-theme="luxury"] .animate-gradient-shift {
+  background: linear-gradient(-45deg, rgba(0,0,0,0.4), rgba(212,175,55,0.1), rgba(40,40,80,0.1), rgba(0,0,0,0.4)) !important;
+  background-size: 200% 200% !important;
+}
+
+/* ==================== VIBRANT THEME ==================== */
+/* Colorful, modern, energetic */
+:root[data-theme="vibrant"] {
+  --background: 0 0% 100%;
+  --foreground: 280 20% 15%;
+  --border: 280 50% 88%;
+  --card: 0 0% 98%;
+  --card-foreground: 280 20% 15%;
+  --primary: 280 85% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 280 85% 90%;
+  --secondary-foreground: 280 20% 20%;
+  --accent: 20 95% 55%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 280 50% 90%;
+  --muted-foreground: 280 20% 40%;
+  --sidebar: 280 50% 94%;
+  --sidebar-primary: 280 85% 50%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 20 95% 55%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --section-light-green: 280 60% 92%;
+  --section-light-orange: 20 95% 90%;
+  --section-light-yellow: 45 95% 88%;
+}
+
+:root[data-theme="vibrant"] {
+  --shadow-lg: 0px 4px 12px 0px rgba(136,60,255,0.15);
+  --shadow-xl: 0px 8px 24px 0px rgba(136,60,255,0.2);
+}
+
+:root[data-theme="vibrant"] .glassmorphism {
+  backdrop-filter: blur(10px) !important;
+  background: linear-gradient(135deg, rgba(136,60,255,0.1), rgba(255,100,50,0.05)) !important;
+  border: 1px solid rgba(136,60,255,0.3) !important;
+}
+
+:root[data-theme="vibrant"] .hover-elevate {
+  transition: all 0.2s ease !important;
+}
+
+:root[data-theme="vibrant"] .hover-elevate:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0px 8px 20px 0px rgba(136,60,255,0.25) !important;
+}

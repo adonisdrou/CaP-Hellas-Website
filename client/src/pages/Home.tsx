@@ -9,6 +9,7 @@ import MorphingBlobs from '@/components/MorphingBlobs';
 import CursorTrail from '@/components/CursorTrail';
 import FloatingContactButton from '@/components/FloatingContactButton';
 import ProgressBar from '@/components/ProgressBar';
+import ThemeVariants from '@/components/ThemeVariants';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProgressBar />
       <CursorTrail />
       <MorphingBlobs />
+      <ThemeVariants />
       <Navigation />
       <main>
         <HeroSection />
