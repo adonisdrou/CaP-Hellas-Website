@@ -3,10 +3,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@assets/generated_images/hero_shipping_produce_image.png';
 import { useMagneticCursor } from '@/hooks/useMagneticCursor';
+import { useParallax } from '@/hooks/useParallax';
 
 export default function HeroSection() {
   const { t, language } = useLanguage();
   const magneticRef = useMagneticCursor();
+  const { ref, translateY } = useParallax(0.5);
 
   const scrollToProducts = () => {
     const element = document.querySelector('#products');
@@ -29,10 +31,13 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden" ref={ref}>
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          transform: `translateY(${translateY}px)`
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70 animate-gradient-shift" 
         style={{

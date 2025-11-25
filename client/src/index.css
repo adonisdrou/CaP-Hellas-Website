@@ -280,6 +280,34 @@
     @apply backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20 dark:border-white/10;
   }
 
+  .perspective {
+    perspective: 1000px;
+  }
+
+  input:focus {
+    @apply ring-2 ring-primary/50 ring-offset-2 dark:ring-offset-slate-900 transition-all duration-300;
+  }
+
+  input {
+    @apply transition-all duration-300;
+  }
+
+  input::placeholder {
+    @apply text-muted-foreground/50;
+  }
+
+  textarea:focus {
+    @apply ring-2 ring-primary/50 ring-offset-2 dark:ring-offset-slate-900 transition-all duration-300;
+  }
+
+  textarea {
+    @apply transition-all duration-300;
+  }
+
+  textarea::placeholder {
+    @apply text-muted-foreground/50;
+  }
+
   .animate-gradient-shift {
     animation: gradient-shift 8s ease infinite;
     background-size: 200% 200%;

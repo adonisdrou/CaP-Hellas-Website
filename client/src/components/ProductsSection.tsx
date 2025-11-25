@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import ProductCard from './ProductCard';
+import FlipCard from './FlipCard';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import SVGDivider from './SVGDivider';
 import strawberriesImage from '@assets/generated_images/fresh_strawberries_product_photo.png';
 import orangesImage from '@assets/generated_images/fresh_oranges_product_photo.png';
 import mandarinsImage from '@assets/generated_images/fresh_mandarins_product_photo.png';
@@ -70,8 +71,10 @@ export default function ProductsSection() {
   };
 
   return (
-    <section id="products" className="py-20 scroll-mt-16" style={{ backgroundColor: 'hsl(var(--section-light-orange))' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <>
+      <SVGDivider variant="wave" className="bg-white dark:bg-slate-900" />
+      <section id="products" className="py-20 scroll-mt-16" style={{ backgroundColor: 'hsl(var(--section-light-orange))' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent" data-testid="text-products-title">
           {t.products.title}
         </h2>
@@ -92,20 +95,23 @@ export default function ProductsSection() {
           {['fruits', 'vegetables', 'other'].map((category) => (
             <TabsContent key={category} value={category}>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                {getProductsByCategory(category).map((product) => (
-                  <ProductCard
-                    key={product.nameKey}
-                    name={t.products.items[product.nameKey]}
-                    image={product.image}
-                    origin={product.origin}
-                    category={getCategoryLabel(product.category)}
-                  />
+                {getProductsByCategory(category).map((product, idx) => (
+                  <div key={product.nameKey} style={{ animationDelay: `${idx * 50}ms` }}>
+                    <FlipCard
+                      name={t.products.items[product.nameKey]}
+                      image={product.image}
+                      origin={product.origin}
+                      category={getCategoryLabel(product.category)}
+                    />
+                  </div>
                 ))}
               </div>
             </TabsContent>
           ))}
         </Tabs>
-      </div>
-    </section>
+        </div>
+      </section>
+      <SVGDivider variant="curve" className="bg-white dark:bg-slate-900" />
+    </>
   );
 }
