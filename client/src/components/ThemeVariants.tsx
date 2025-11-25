@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Palette } from 'lucide-react';
 
-type Theme = 'default' | 'minimalist' | 'luxury';
+type Theme = 'default' | 'minimalist' | 'luxury' | 'tech' | 'nature' | 'retro';
 
 export default function ThemeVariants() {
   const [theme, setTheme] = useState<Theme>('default');
@@ -13,7 +13,7 @@ export default function ThemeVariants() {
   }, []);
 
   const toggleTheme = () => {
-    const themes: Theme[] = ['default', 'minimalist', 'luxury'];
+    const themes: Theme[] = ['default', 'minimalist', 'luxury', 'tech', 'nature', 'retro'];
     const currentIndex = themes.indexOf(theme);
     const nextIndex = (currentIndex + 1) % themes.length;
     const newTheme = themes[nextIndex];
@@ -39,6 +39,9 @@ export default function ThemeVariants() {
         {theme === 'default' && 'Modern'}
         {theme === 'minimalist' && 'Minimal'}
         {theme === 'luxury' && 'Luxury'}
+        {theme === 'tech' && 'Tech'}
+        {theme === 'nature' && 'Nature'}
+        {theme === 'retro' && 'Retro'}
       </div>
     </div>
   );

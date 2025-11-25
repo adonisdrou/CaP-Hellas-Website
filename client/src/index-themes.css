@@ -136,3 +136,145 @@
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 0px 8px 20px 0px rgba(136,60,255,0.25) !important;
 }
+
+/* ==================== TECH STARTUP THEME ==================== */
+/* Bold gradients, modern, trendy */
+:root[data-theme="tech"] {
+  --background: 260 40% 6%;
+  --foreground: 0 0% 98%;
+  --border: 260 40% 20%;
+  --card: 260 40% 10%;
+  --card-foreground: 0 0% 98%;
+  --primary: 280 100% 60%;
+  --primary-foreground: 260 40% 6%;
+  --secondary: 20 100% 60%;
+  --secondary-foreground: 260 40% 6%;
+  --accent: 180 100% 50%;
+  --accent-foreground: 260 40% 6%;
+  --muted: 260 40% 25%;
+  --muted-foreground: 0 0% 70%;
+  --sidebar: 260 40% 8%;
+  --sidebar-primary: 280 100% 60%;
+  --sidebar-primary-foreground: 260 40% 6%;
+  --sidebar-accent: 180 100% 50%;
+  --sidebar-accent-foreground: 260 40% 6%;
+  --section-light-green: 280 50% 16%;
+  --section-light-orange: 20 90% 16%;
+  --section-light-yellow: 180 80% 16%;
+}
+
+:root[data-theme="tech"] {
+  --shadow-lg: 0px 8px 32px 0px rgba(136,0,255,0.3);
+  --shadow-xl: 0px 16px 48px 0px rgba(0,200,255,0.3);
+}
+
+:root[data-theme="tech"] .animate-gradient-shift {
+  background: linear-gradient(-45deg, rgba(136,0,255,0.2), rgba(0,200,255,0.15), rgba(255,0,255,0.1), rgba(136,0,255,0.2)) !important;
+  background-size: 300% 300% !important;
+  animation: gradient-shift 6s ease infinite !important;
+}
+
+:root[data-theme="tech"] .glassmorphism {
+  backdrop-filter: blur(20px) !important;
+  background: linear-gradient(135deg, rgba(136,0,255,0.15), rgba(0,200,255,0.1)) !important;
+  border: 1px solid rgba(0,200,255,0.3) !important;
+  box-shadow: 0 8px 32px rgba(136,0,255,0.2) !important;
+}
+
+/* ==================== NATURE THEME ==================== */
+/* Earthy tones, organic aesthetic */
+:root[data-theme="nature"] {
+  --background: 100 30% 92%;
+  --foreground: 100 30% 20%;
+  --border: 100 30% 82%;
+  --card: 100 20% 97%;
+  --card-foreground: 100 30% 20%;
+  --primary: 100 40% 42%;
+  --primary-foreground: 100 20% 97%;
+  --secondary: 40 60% 50%;
+  --secondary-foreground: 100 30% 20%;
+  --accent: 25 80% 50%;
+  --accent-foreground: 100 20% 97%;
+  --muted: 100 25% 85%;
+  --muted-foreground: 100 30% 35%;
+  --sidebar: 100 30% 94%;
+  --sidebar-primary: 100 40% 42%;
+  --sidebar-primary-foreground: 100 20% 97%;
+  --sidebar-accent: 25 80% 50%;
+  --sidebar-accent-foreground: 100 20% 97%;
+  --section-light-green: 100 40% 88%;
+  --section-light-orange: 25 80% 90%;
+  --section-light-yellow: 40 70% 88%;
+}
+
+:root[data-theme="nature"] {
+  --shadow-lg: 0px 4px 16px 0px rgba(80,120,60,0.2);
+  --shadow-xl: 0px 8px 32px 0px rgba(80,120,60,0.25);
+}
+
+:root[data-theme="nature"] .animate-gradient-shift {
+  background: linear-gradient(-45deg, rgba(100,140,80,0.15), rgba(200,160,80,0.1), rgba(100,140,80,0.1), rgba(100,140,80,0.15)) !important;
+  background-size: 200% 200% !important;
+  animation: gradient-shift 8s ease infinite !important;
+}
+
+:root[data-theme="nature"] .glassmorphism {
+  backdrop-filter: blur(8px) !important;
+  background: linear-gradient(135deg, rgba(100,140,80,0.1), rgba(200,160,80,0.08)) !important;
+  border: 1px solid rgba(100,140,80,0.25) !important;
+}
+
+:root[data-theme="nature"] .MorphingBlobs {
+  opacity: 0.25 !important;
+}
+
+/* ==================== RETRO THEME ==================== */
+/* 80s/90s inspired, nostalgic */
+:root[data-theme="retro"] {
+  --background: 280 50% 18%;
+  --foreground: 60 100% 85%;
+  --border: 280 50% 28%;
+  --card: 280 50% 22%;
+  --card-foreground: 60 100% 85%;
+  --primary: 60 100% 55%;
+  --primary-foreground: 280 50% 18%;
+  --secondary: 320 100% 60%;
+  --secondary-foreground: 280 50% 18%;
+  --accent: 40 100% 50%;
+  --accent-foreground: 280 50% 18%;
+  --muted: 280 50% 32%;
+  --muted-foreground: 60 100% 70%;
+  --sidebar: 280 50% 20%;
+  --sidebar-primary: 60 100% 55%;
+  --sidebar-primary-foreground: 280 50% 18%;
+  --sidebar-accent: 40 100% 50%;
+  --sidebar-accent-foreground: 280 50% 18%;
+  --section-light-green: 280 50% 24%;
+  --section-light-orange: 40 100% 26%;
+  --section-light-yellow: 60 100% 24%;
+}
+
+:root[data-theme="retro"] {
+  --shadow-lg: 0px 8px 0px 0px rgba(60,100,255,0.4);
+  --shadow-xl: 0px 12px 0px 0px rgba(60,100,255,0.5);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+:root[data-theme="retro"] .animate-gradient-shift {
+  background: linear-gradient(-45deg, rgba(60,100,255,0.2), rgba(255,50,150,0.2), rgba(255,200,0,0.15), rgba(60,100,255,0.2)) !important;
+  background-size: 300% 300% !important;
+  animation: gradient-shift 6s ease infinite !important;
+}
+
+:root[data-theme="retro"] .glassmorphism {
+  backdrop-filter: blur(0px) !important;
+  background: rgba(60,100,255,0.15) !important;
+  border: 2px solid rgba(60,100,255,0.6) !important;
+  box-shadow: 8px 8px 0px rgba(255,50,150,0.3) !important;
+}
+
+:root[data-theme="retro"] .card {
+  border: 2px solid rgba(255,200,0,0.4) !important;
+  box-shadow: 4px 4px 0px rgba(60,100,255,0.3) !important;
+}
