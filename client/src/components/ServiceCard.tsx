@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
   return (
-    <Card className="transition-all duration-500 border-2 border-primary/30 shadow-lg hover:shadow-2xl hover:border-primary/60 group overflow-hidden glassmorphism hover:scale-105 h-full">
+    <Card className="transition-all duration-500 border-2 border-primary/30 shadow-[0_0_30px_hsl(130_50%_28_/_0.3),_0_0_60px_hsl(20_85%_55_/_0.2)] hover:shadow-[0_0_50px_hsl(130_50%_28_/_0.6),_0_0_100px_hsl(20_85%_55_/_0.4)] hover:border-primary/80 group overflow-hidden glassmorphism hover:scale-105 h-full animate-quantum-pulse">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <CardContent className="p-8 relative">
         <div className="flex flex-col items-center text-center gap-4">

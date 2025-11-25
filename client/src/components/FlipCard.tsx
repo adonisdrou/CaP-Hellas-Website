@@ -31,7 +31,7 @@ export default function FlipCard({ name, image, origin, category }: FlipCardProp
       >
         {/* Front */}
         <div style={{ backfaceVisibility: 'hidden' }}>
-          <Card className="overflow-hidden group border-2 border-accent/20 shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-accent/60 h-full glassmorphism cursor-pointer">
+          <Card className="overflow-hidden group border-2 border-accent/20 shadow-[0_0_20px_hsl(20_85%_55_/_0.3)] transition-all duration-500 hover:shadow-[0_0_50px_hsl(20_85%_55_/_0.6),_0_0_100px_hsl(130_50%_28_/_0.4)] hover:border-accent/80 h-full glassmorphism cursor-pointer">
             <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
               <img
                 src={image}
@@ -65,7 +65,7 @@ export default function FlipCard({ name, image, origin, category }: FlipCardProp
             transform: 'rotateY(180deg)',
           }}
         >
-          <Card className="overflow-hidden border-2 border-primary/40 shadow-lg h-full glassmorphism cursor-pointer bg-gradient-to-br from-primary/20 to-accent/10">
+          <Card className="overflow-hidden border-2 border-primary/60 shadow-[0_0_30px_hsl(130_50%_28_/_0.5),_0_0_60px_hsl(20_85%_55_/_0.3)] h-full glassmorphism cursor-pointer bg-gradient-to-br from-primary/30 to-accent/20 animate-quantum-pulse">
             <CardContent className="p-6 flex flex-col items-center justify-center h-full text-center gap-4">
               <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {name}

@@ -109,6 +109,29 @@ export default {
           "0%, 100%": { boxShadow: "0 0 20px rgba(40, 167, 69, 0.3), inset 0 0 20px rgba(40, 167, 69, 0.1)" },
           "50%": { boxShadow: "0 0 40px rgba(40, 167, 69, 0.5), inset 0 0 30px rgba(40, 167, 69, 0.2)" },
         },
+        "glow-text": {
+          "0%": { textShadow: "0 0 5px hsl(130 50% 28%), 0 0 10px hsl(20 85% 55%)", opacity: "0" },
+          "50%": { textShadow: "0 0 20px hsl(130 50% 28%), 0 0 40px hsl(20 85% 55%)" },
+          "100%": { textShadow: "0 0 10px hsl(130 50% 28%), 0 0 20px hsl(20 85% 55%)", opacity: "1" },
+        },
+        "quantum-pulse": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(130 50% 28%), 0 0 40px hsl(20 85% 55%), inset 0 0 20px hsl(130 50% 28% / 0.5)" },
+          "50%": { boxShadow: "0 0 40px hsl(130 50% 28%), 0 0 80px hsl(20 85% 55%), inset 0 0 40px hsl(20 85% 55% / 0.5)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-1000px 0" },
+          "100%": { backgroundPosition: "1000px 0" },
+        },
+        "holographic": {
+          "0%, 100%": { textShadow: "0 0 30px hsl(130 50% 28%), 0 0 60px hsl(20 85% 55%)", filter: "hue-rotate(0deg) saturate(1)" },
+          "25%": { textShadow: "0 0 40px hsl(200 70% 50%), 0 0 80px hsl(260 75% 50%)", filter: "hue-rotate(30deg) saturate(1.5)" },
+          "50%": { textShadow: "0 0 30px hsl(130 50% 28%), 0 0 60px hsl(20 85% 55%)", filter: "hue-rotate(0deg) saturate(1)" },
+          "75%": { textShadow: "0 0 40px hsl(20 85% 55%), 0 0 80px hsl(130 50% 28%)", filter: "hue-rotate(-30deg) saturate(1.5)" },
+        },
+        "liquid-swipe": {
+          "0%": { clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)" },
+          "100%": { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -119,6 +142,11 @@ export default {
         "blob1": "blob1 8s infinite",
         "blob2": "blob2 7s infinite",
         "blob3": "blob3 9s infinite",
+        "glow-text": "glow-text 0.5s ease-out",
+        "quantum-pulse": "quantum-pulse 2s ease-in-out infinite",
+        "shimmer": "shimmer 3s infinite",
+        "holographic": "holographic 4s ease-in-out infinite",
+        "liquid-swipe": "liquid-swipe 0.6s ease-out forwards",
       },
       perspective: {
         "1000": "1000px",
