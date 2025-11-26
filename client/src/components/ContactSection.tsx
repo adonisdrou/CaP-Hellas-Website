@@ -57,27 +57,22 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('https://formspree.io/f/xyzejqwv', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          phone: data.phone,
-          message: `Γλώσσα: ${data.language === 'en' ? 'English' : data.language === 'el' ? 'Ελληνικά' : 'Polski'}\n\nΜήνυμα:\n${data.message}`,
-        }),
+        body: JSON.stringify(data),
       });
 
       const result = await response.json();
 
-      if (result.ok) {
+      if (result.success) {
         toast({
           title: 'Επιτυχία!',
           description: 'Θα επικοινωνήσει η Selina Majerska σύντομα!',
         });
         form.reset();
       } else {
-        throw new Error(result.error || 'Αποτυχία');
+        throw new Error(result.message || 'Αποτυχία');
       }
     } catch (error) {
       console.error('Σφάλμα φόρμας:', error);
