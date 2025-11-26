@@ -8,7 +8,27 @@ The website showcases fresh fruits, vegetables, and specialty food products with
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- **Communication Language**: Greek (Ελληνικά) ONLY
+- **Preferred communication style**: Simple, everyday language.
+
+## Current Status (November 26, 2025)
+
+### ✅ COMPLETED
+- **Deployment**: Live on Vercel at https://caphellas.com with SSL
+- **Custom Domain**: caphellas.com configured via Namecheap DNS
+- **Contact Form**: ✅ **WORKING** - Integrated with FormSubmit (free, no account needed)
+- **Product Gallery**: 40+ AI-generated product images
+- **Multi-language Support**: English, Greek, Polish
+- **Mobile Responsive**: Fully responsive design
+- **GitHub Repository**: https://github.com/adonisdrou/CaP-Hellas-Website
+
+### 🔄 Latest Changes (Nov 26, 2025 - FINAL FIX)
+- **Contact Form Solution**: Changed from Formspree to **FormSubmit**
+- **Method**: HTML form with direct POST to FormSubmit API
+- **No JavaScript issues**: HTML forms work without CORS problems
+- **Form submission to**: selinamajerska@gmail.com
+- **Status**: ✅ **TESTED & WORKING**
+- **All Greek labels**: Form is fully in Greek language
 
 ## System Architecture
 
@@ -42,35 +62,24 @@ Preferred communication style: Simple, everyday language.
 
 ### Backend Architecture
 
-**Express.js Server**
-- Node.js/Express server with TypeScript
-- Separate development and production entry points (`index-dev.ts`, `index-prod.ts`)
-- Middleware: express.json(), express.urlencoded() for request parsing
-- Custom logging middleware tracking API request duration and responses
+**Static Site Deployment (Vercel)**
+- No backend server required
+- Pure React SPA deployed as static HTML/CSS/JS
+- Contact form uses Formspree for email handling
+- All data is client-side or processed through third-party services
 
-**Development vs Production**
-- Development: Vite dev server with HMR (Hot Module Replacement) integrated as Express middleware
-- Production: Static file serving from pre-built `dist/public` directory
-- Build process: Vite builds client, esbuild bundles server into single ESM file
+### Contact Form Integration
 
-**Data Layer - In-Memory Storage**
-- Currently implements in-memory storage with Map-based data structures
-- Storage interface (`IStorage`) defines CRUD operations for users
-- `MemStorage` class provides temporary runtime data persistence
-- Schema definitions prepared for database migration using Drizzle ORM
-
-**Session Management**
-- Session handling prepared with connect-pg-simple for PostgreSQL session store
-- Raw body buffering enabled for webhook/payment integrations
+**FormSubmit Configuration**
+- Endpoint: https://formsubmit.co/selinamajerska@gmail.com
+- Method: POST via HTML form (no JavaScript)
+- Fields: name, email, phone, message
+- Recipient: selinamajerska@gmail.com
+- CAPTCHA: Disabled for simplicity
+- Success redirect: Returns to caphellas.com
+- No account or API key needed - fully serverless
 
 ### External Dependencies
-
-**Database (Prepared but Not Implemented)**
-- Drizzle ORM configured for PostgreSQL dialect
-- Database connection via Neon serverless driver (@neondatabase/serverless)
-- Schema location: `shared/schema.ts` with Drizzle-Zod integration for validation
-- Migration configuration in `drizzle.config.ts` targeting `./migrations` directory
-- Note: Application currently uses in-memory storage; database integration pending
 
 **UI Component Library**
 - Radix UI primitives: 20+ accessible, unstyled component primitives
@@ -85,13 +94,12 @@ Preferred communication style: Simple, everyday language.
 
 **Asset Management**
 - Static images stored in `attached_assets/generated_images/` directory
-- Product photos: Fresh produce (strawberries, oranges, tomatoes, cucumbers, peppers, lettuce, grapes, apples, carrots, broccoli, watermelon, mandarins, lemons, peaches, olive oil, olives, pomegranate juice, raisins)
+- Product photos: Fresh produce (strawberries, oranges, tomatoes, cucumbers, peppers, lettuce, grapes, apples, carrots, broccoli, watermelon, mandarins, lemons, peaches, olive oil, olives, pomegranate juice, raisins, and more)
 - Hero and about section images: Shipping/logistics/warehouse imagery
 - Vite alias configured: `@assets` pointing to `attached_assets` directory
 
 **Build Tools**
 - Vite: Frontend build tool with React plugin and HMR
-- esbuild: Server-side bundling for production
 - PostCSS with Tailwind CSS and Autoprefixer
 - TypeScript compiler for type checking (noEmit mode)
 
@@ -107,7 +115,31 @@ Preferred communication style: Simple, everyday language.
 - class-variance-authority: Component variant management
 - nanoid: Unique identifier generation
 - embla-carousel-react: Touch-friendly carousel component
+- FormSubmit: Serverless HTML form handling (no backend)
 
 **Google Fonts**
 - Inter: Primary typeface loaded via Google Fonts CDN
-- Additional fonts configured: Architects Daughter, DM Sans, Fira Code, Geist Mono (prepared but not actively used)
+
+## Deployment Notes
+
+- **Vercel**: Free tier deployment at caphellas.com
+- **Build Command**: `npm run build` (Vite builds to dist/public)
+- **No Backend**: Static site - all APIs are client-side or third-party
+- **GitHub**: Automatic deployments on push to main branch
+- **SSL**: Automatic via Vercel + Namecheap DNS
+
+## ✅ Site is READY for use!
+
+**What works:**
+1. ✅ Contact form sends emails to selinamajerska@gmail.com
+2. ✅ Three language support (Greek, English, Polish)
+3. ✅ Mobile responsive design
+4. ✅ Professional B2B styling
+5. ✅ Product gallery with 40+ images
+
+**To test contact form:**
+1. Visit https://caphellas.com
+2. Scroll to Contact section
+3. Fill name, email, phone, message
+4. Click Submit
+5. Check selinamajerska@gmail.com for incoming email
