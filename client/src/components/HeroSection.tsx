@@ -69,10 +69,9 @@ export default function HeroSection() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
-            ref={magneticRef}
             size="lg"
             onClick={scrollToProducts}
-            className="gap-2 text-base w-full sm:w-auto transition-transform duration-200 ease-out"
+            className="gap-2 text-base w-full sm:w-auto"
             data-testid="button-hero-cta"
           >
             {t.hero.cta}
