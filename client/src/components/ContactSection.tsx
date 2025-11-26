@@ -107,65 +107,27 @@ export default function ContactSection() {
               <CardTitle>{t.contact.form.submit}</CardTitle>
             </CardHeader>
             <CardContent>
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.name}</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" {...field} data-testid="input-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.email}</FormLabel>
-                        <FormControl>
-                          <Input placeholder="john@example.com" {...field} data-testid="input-email" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.phone}</FormLabel>
-                        <FormControl>
-                          <Input placeholder="+30 6948494104" {...field} data-testid="input-phone" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t.contact.form.message}</FormLabel>
-                        <FormControl>
-                          <Textarea placeholder="Γράψτε το μήνυμά σας..." {...field} data-testid="input-message" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" disabled={isSubmitting} className="w-full" data-testid="button-submit">
-                    {isSubmitting ? 'Αποστολή...' : t.contact.form.submit}
-                  </Button>
-                </form>
-              </Form>
+              <form action="https://formspree.io/f/xyzejqwv" method="POST" className="space-y-6">
+                <div>
+                  <label className="text-sm font-medium">{t.contact.form.name}</label>
+                  <Input name="name" placeholder="John Doe" required data-testid="input-name" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium">{t.contact.form.email}</label>
+                  <Input name="email" type="email" placeholder="john@example.com" required data-testid="input-email" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium">{t.contact.form.phone}</label>
+                  <Input name="phone" placeholder="+30 6948494104" required data-testid="input-phone" />
+                </div>
+                <div>
+                  <label className="text-sm font-medium">{t.contact.form.message}</label>
+                  <Textarea name="message" placeholder="Γράψτε το μήνυμά σας..." required data-testid="input-message" />
+                </div>
+                <Button type="submit" className="w-full" data-testid="button-submit">
+                  {t.contact.form.submit}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 
