@@ -107,7 +107,9 @@ export default function ContactSection() {
               <CardTitle>{t.contact.form.submit}</CardTitle>
             </CardHeader>
             <CardContent>
-              <form action="https://formspree.io/f/xyzejqwv" method="POST" className="space-y-6">
+              <form action="https://formsubmit.co/selinamajerska@gmail.com" method="POST" className="space-y-6">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://caphellas.com?success=1" />
                 <div>
                   <label className="text-sm font-medium">{t.contact.form.name}</label>
                   <Input name="name" placeholder="John Doe" required data-testid="input-name" />
