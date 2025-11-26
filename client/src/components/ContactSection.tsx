@@ -30,7 +30,7 @@ import { useToast } from '@/hooks/use-toast';
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Το όνομα πρέπει να έχει τουλάχιστον 2 χαρακτήρες'),
   email: z.string().email('Μη έγκυρη διεύθυνση email'),
-  phone: z.string().min(10, 'Το τηλέφωνο πρέπει να έχει τουλάχιστον 10 ψηφία'),
+  phone: z.string().min(5, 'Το τηλέφωνο είναι υποχρεωτικό'),
   message: z.string().min(10, 'Το μήνυμα πρέπει να έχει τουλάχιστον 10 χαρακτήρες'),
   language: z.enum(['en', 'el', 'pl']),
 });
@@ -57,29 +57,27 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const formData = new FormData();
-      formData.append('access_key', 'cec72a1c-96ef-49b8-b7d9-1a234567890a');
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('phone', data.phone);
-      formData.append('message', `Γλώσσα: ${data.language === 'en' ? 'English' : data.language === 'el' ? 'Ελληνικά' : 'Polski'}\n\nΜήνυμα:\n${data.message}`);
-      formData.append('to_email', 'selinamajerska@gmail.com');
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://formspree.io/f/xyzejqwv', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: `Γλώσσα: ${data.language === 'en' ? 'English' : data.language === 'el' ? 'Ελληνικά' : 'Polski'}\n\nΜήνυμα:\n${data.message}`,
+        }),
       });
 
       const result = await response.json();
 
-      if (result.success) {
+      if (result.ok) {
         toast({
           title: 'Επιτυχία!',
           description: 'Θα επικοινωνήσει η Selina Majerska σύντομα!',
         });
         form.reset();
       } else {
-        throw new Error('Αποτυχία υποβολής φόρμας');
+        throw new Error(result.error || 'Αποτυχία');
       }
     } catch (error) {
       console.error('Σφάλμα φόρμας:', error);
@@ -178,7 +176,7 @@ export default function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Mail className="w-5 h-5" />
-                  {t.contact.email}
+                  {t.contact.info.contact}
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -190,7 +188,7 @@ export default function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Phone className="w-5 h-5" />
-                  {t.contact.phone}
+                  Τηλέφωνο
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -202,7 +200,7 @@ export default function ContactSection() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
-                  {t.contact.address}
+                  {t.contact.info.address}
                 </CardTitle>
               </CardHeader>
               <CardContent>
