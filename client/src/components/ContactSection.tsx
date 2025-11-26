@@ -64,7 +64,7 @@ export default function ContactSection() {
       formData.append('message', `Language: ${data.language}\n\n${data.message}`);
       formData.append('_captcha', 'false');
 
-      const response = await fetch('https://formspree.io/f/xyzqpwlb', {
+      const response = await fetch('https://formspree.io/f/xkglwkvb', {
         method: 'POST',
         body: formData,
       });
