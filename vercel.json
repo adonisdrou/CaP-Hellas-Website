@@ -1,6 +1,5 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "vite build",
   "outputDirectory": "dist/public",
-  "framework": "vite",
-  "nodejs": "20.x"
+  "framework": "vite"
 }

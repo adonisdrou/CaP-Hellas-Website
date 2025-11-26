@@ -57,17 +57,19 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact', {
+      const formData = new FormData();
+      formData.append('name', data.name);
+      formData.append('email', data.email);
+      formData.append('phone', data.phone);
+      formData.append('message', `Language: ${data.language}\n\n${data.message}`);
+      formData.append('_captcha', 'false');
+
+      const response = await fetch('https://formspree.io/f/xyzqpwlb', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
-      const result = await response.json();
-
-      if (response.ok && result.success) {
+      if (response.ok) {
         toast({
           title: t.contact.form.success,
           description: 'Selina Majerska will contact you soon!',
@@ -76,7 +78,7 @@ export default function ContactSection() {
       } else {
         toast({
           title: 'Error',
-          description: result.message || 'Failed to send message',
+          description: 'Failed to send message',
           variant: 'destructive',
         });
       }
