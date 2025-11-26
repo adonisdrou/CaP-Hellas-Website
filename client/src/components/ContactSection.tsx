@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -26,6 +26,7 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 import Logo from './Logo';
 import FruitDecorations from './FruitDecorations';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -42,6 +43,10 @@ export default function ContactSection() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  useEffect(() => {
+    emailjs.init('jgOmWpB6PfLwvM5qZ');
+  }, []);
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -57,31 +62,20 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const formData = new FormData();
-      formData.append('name', data.name);
-      formData.append('email', data.email);
-      formData.append('phone', data.phone);
-      formData.append('message', `Language: ${data.language}\n\n${data.message}`);
-      formData.append('_captcha', 'false');
-
-      const response = await fetch('https://formspree.io/f/xkglwkvb', {
-        method: 'POST',
-        body: formData,
+      await emailjs.send('service_caphellas', 'template_caphellas', {
+        to_email: 'selinamajerska@gmail.com',
+        from_name: data.name,
+        from_email: data.email,
+        phone: data.phone,
+        message: data.message,
+        language: data.language === 'en' ? 'English' : data.language === 'el' ? 'Ελληνικά' : 'Polski',
       });
 
-      if (response.ok) {
-        toast({
-          title: t.contact.form.success,
-          description: 'Selina Majerska will contact you soon!',
-        });
-        form.reset();
-      } else {
-        toast({
-          title: 'Error',
-          description: 'Failed to send message',
-          variant: 'destructive',
-        });
-      }
+      toast({
+        title: t.contact.form.success,
+        description: 'Selina Majerska will contact you soon!',
+      });
+      form.reset();
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
