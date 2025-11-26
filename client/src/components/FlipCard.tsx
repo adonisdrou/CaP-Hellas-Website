@@ -17,7 +17,7 @@ export default function FlipCard({ name, image, origin, category }: FlipCardProp
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ${isVisible ? 'animate-float-up opacity-100' : 'opacity-0'}`}
+      className={`transition-all duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <Card className="overflow-hidden group border-2 border-accent/20 shadow-lg transition-all duration-500 hover:shadow-2xl hover:border-accent/60 h-full glassmorphism">
         <div className="aspect-square relative overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10">
