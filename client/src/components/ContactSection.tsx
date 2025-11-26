@@ -57,25 +57,28 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/xyzejqwv', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          message: data.message,
+        }),
       });
 
-      const result = await response.json();
-
-      if (result.success) {
+      if (response.ok) {
         toast({
           title: 'Επιτυχία!',
           description: 'Θα επικοινωνήσει η Selina Majerska σύντομα!',
         });
         form.reset();
       } else {
-        throw new Error(result.message || 'Αποτυχία');
+        throw new Error('Αποτυχία');
       }
     } catch (error) {
-      console.error('Σφάλμα φόρμας:', error);
+      console.error('Contact form error:', error);
       toast({
         title: 'Σφάλμα',
         description: 'Δεν ήταν δυνατό να σταλεί το μήνυμα. Δοκιμάστε ξανά.',
